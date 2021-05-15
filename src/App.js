@@ -3,21 +3,21 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Header } from './component/Header';
-import {Container, Row ,Col} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 
 
 
 function App() {
   return (
- <div>
- {/* header */}
- <Container fluid="md" className="container">
- <Row className="rows">
-    <Col className="columns"><Header /></Col>
-  </Row>
- </Container>
- </div>          
+    <div>
+      {/* header */}
+      <Container fluid="md" className="container">
+        <Row className="rows">
+          <Col className="columns"><Header /></Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 

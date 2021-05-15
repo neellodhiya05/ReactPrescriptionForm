@@ -4,7 +4,7 @@ export class Select extends Component{
     render(){
         return(
             <div >
-                <select defaultValue={" "} >
+                <select defaultValue={"default"} >
                     <option value="-8.00">-8.00</option>
                   
                     <option value="-7.75">-7.75</option>
@@ -69,7 +69,7 @@ export class Select extends Component{
                   
                     <option value="-0.25">-0.25</option>
                   
-                    <option value=""  >+/-</option>
+                    <option value="default"  >+/-</option>
                   
                     <option value="0.00">0.00</option>
                   

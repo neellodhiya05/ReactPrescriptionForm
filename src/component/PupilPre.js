@@ -19,7 +19,7 @@ export class PupilPre extends Component{
 
                     <Col>
                         
-                <select defaultValue={" "}>
+                <select defaultValue={"63"}>
               <option value="">Select...</option>
             
               <option value="55">55</option>

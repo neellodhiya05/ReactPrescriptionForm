@@ -4,7 +4,7 @@ export class NearAddSelect extends Component{
     render(){
         return(
             <div>
-                <select>
+                <select defaultValue={" "} >
                     <option value="-4.00">-4.00</option>
                   
                     <option value="-3.75">-3.75</option>
@@ -37,7 +37,7 @@ export class NearAddSelect extends Component{
                   
                     <option value="-0.25">-0.25</option>
                   
-                    <option value="" selected="">+/-</option>
+                    <option value="" >+/-</option>
                   
                     <option value="0.00">0.00</option>
                   

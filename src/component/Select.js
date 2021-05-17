@@ -1,150 +1,88 @@
-import React, { Component } from "react";
-
-export class Select extends Component {
-    render() {
-        return (
-            <div >
-                <select defaultValue={"default"} >
-                    <option value="-8.00">-8.00</option>
-
-                    <option value="-7.75">-7.75</option>
-
-                    <option value="-7.50">-7.50</option>
-
-                    <option value="-7.25">-7.25</option>
-
-                    <option value="-7.00">-7.00</option>
-
-                    <option value="-6.75">-6.75</option>
-
-                    <option value="-6.50">-6.50</option>
-
-                    <option value="-6.25">-6.25</option>
-
-                    <option value="-6.00">-6.00</option>
-
-                    <option value="-5.75">-5.75</option>
-
-                    <option value="-5.50">-5.50</option>
-
-                    <option value="-5.25">-5.25</option>
-
-                    <option value="-5.00">-5.00</option>
-
-                    <option value="-4.75">-4.75</option>
-
-                    <option value="-4.50">-4.50</option>
-
-                    <option value="-4.25">-4.25</option>
-
-                    <option value="-4.00">-4.00</option>
-
-                    <option value="-3.75">-3.75</option>
-
-                    <option value="-3.50">-3.50</option>
-
-                    <option value="-3.25">-3.25</option>
-
-                    <option value="-3.00">-3.00</option>
-
-                    <option value="-2.75">-2.75</option>
-
-                    <option value="-2.50">-2.50</option>
-
-                    <option value="-2.25">-2.25</option>
-
-                    <option value="-2.00">-2.00</option>
-
-                    <option value="-1.75">-1.75</option>
-
-                    <option value="-1.50">-1.50</option>
-
-                    <option value="-1.25">-1.25</option>
-
-                    <option value="-1.00">-1.00</option>
-
-                    <option value="-0.75">-0.75</option>
-
-                    <option value="-0.50">-0.50</option>
-
-                    <option value="-0.25">-0.25</option>
-
-                    <option value="default"  >+/-</option>
-
-                    <option value="0.00">0.00</option>
-
-                    <option value="INFINITY">∞</option>
-
-                    <option value="PLANO">PLANO</option>
-
-                    <option value="BALANCE">BALANCE</option>
-
-                    <option value="+0.25">+0.25</option>
-
-                    <option value="+0.50">+0.50</option>
-
-                    <option value="+0.75">+0.75</option>
-
-                    <option value="+1.00">+1.00</option>
-
-                    <option value="+1.25">+1.25</option>
-
-                    <option value="+1.50">+1.50</option>
-
-                    <option value="+1.75">+1.75</option>
-
-                    <option value="+2.00">+2.00</option>
-
-                    <option value="+2.25">+2.25</option>
-
-                    <option value="+2.50">+2.50</option>
-
-                    <option value="+2.75">+2.75</option>
-
-                    <option value="+3.00">+3.00</option>
-
-                    <option value="+3.25">+3.25</option>
-
-                    <option value="+3.50">+3.50</option>
-
-                    <option value="+3.75">+3.75</option>
-
-                    <option value="+4.00">+4.00</option>
-
-                    <option value="+4.25">+4.25</option>
-
-                    <option value="+4.50">+4.50</option>
-
-                    <option value="+4.75">+4.75</option>
-
-                    <option value="+5.00">+5.00</option>
-
-                    <option value="+5.25">+5.25</option>
-
-                    <option value="+5.50">+5.50</option>
-
-                    <option value="+5.75">+5.75</option>
-
-                    <option value="+6.00">+6.00</option>
-
-                    <option value="+6.25">+6.25</option>
-
-                    <option value="+6.50">+6.50</option>
-
-                    <option value="+6.75">+6.75</option>
-
-                    <option value="+7.00">+7.00</option>
-
-                    <option value="+7.25">+7.25</option>
-
-                    <option value="+7.50">+7.50</option>
-
-                    <option value="+7.75">+7.75</option>
-
-                    <option value="+8.00">+8.00</option>
-
-                </select>
-            </div>
-        )
-    }
+import React, { Component } from 'react';
+
+export class Select extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+     values: [],
+      colours: {}
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+     values: [
+        {id: '+/-', name: '+/-'},
+        {id: '-8.00', name: '-8.00'},
+        {id: '-7.75', name: '-7.75'},
+        {id: '-7.50', name: '-7.50'},
+        {id: '-7.25', name: '-7.25'},
+        {id: '-7.00', name: '-6.00'},
+        {id: '-6.75', name: '-6.75'},
+        {id: '-6.50', name: '-6.50'},
+        {id: '-6.25', name: '-6.25'},
+        {id: '-6.00', name: '-6.00'},
+        {id: '-5.75', name: '-5.75'},
+        {id: '-5.50', name: '-5.50'},
+        {id: '-5.25', name: '-5.25'},
+        {id: '-5.00', name: '-5.00'},
+        {id: '-4.75', name: '-4.75'},
+        {id: '-4.50', name: '-4.50'},
+        {id: '-4.25', name: '-4.25'},
+        {id: '-4.00', name: '-4.00'},
+        {id: '-3.75', name: '-3.75'},
+        {id: '-3.50', name: '-3.50'},
+        {id: '-3.25', name: '-3.25'},
+        {id: '-3.00', name: '-3.00'},
+        {id: '-2.75', name: '-2.75'},
+        {id: '-2.50', name: '-2.50'},
+        {id: '-2.25', name: '-2.25'},
+        {id: '-2.00', name: '-2.00'},
+        {id: '-1.75', name: '-1.75'},
+        {id: '-1.50', name: '-1.50'},
+        {id: '-1.25', name: '-1.25'},
+        {id: '-1.00', name: '-1.00'},
+        {id: '-0.75', name: '-0.75'},
+        {id: '-0.50', name: '-0.50'},
+        {id: '-0.25', name: '-0.25'},
+        {id: '-0.00', name: '∞'},
+        {id: 'infinity', name: '-0.00'},
+        {id: 'plano', name: 'plano'},
+        {id: 'balance', name: 'balance'},
+        {id: '+0.25', name: '+0.25'},
+        {id: '+0.50', name: '+0.50'},
+        {id: '+0.75', name: '+0.75'},
+        {id: '+1.00', name: '+1.00'},
+        {id: '+1.25', name: '+1.25'},
+        {id: '+1.50', name: '+1.50'},
+        {id: '+1.75', name: '+1.75'},
+        {id: '+2.00', name: '+2.00'},
+        {id: '+2.25', name: '+2.25'},
+        {id: '+2.50', name: '+2.50'},
+        {id: '+2.75', name: '+2.75'},
+        {id: '+3.00', name: '+3.00'},
+      ]
+    });
+  }
+
+
+  render () {
+    const { values } = this.state;
+
+    let valuesList = values.length > 0
+    	&& values.map((item, i) => {
+      return (
+        <option key={i} value={item.id}>{item.name}</option>
+      )
+    }, this);
+
+    return (
+      <div>
+        <select>
+          {valuesList}
+        </select>
+      </div>
+    );
+  }
 }
+

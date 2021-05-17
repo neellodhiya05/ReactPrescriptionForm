@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { PupilSelect } from "./PupilSelect";
 
 export class PupilPre extends Component {
     render() {
@@ -16,55 +17,9 @@ export class PupilPre extends Component {
                                 <label style={inputStyle}> Pupil Prescription:</label>
                             </form>
                         </Col>
-
+                    
                         <Col>
-
-                            <select defaultValue={"63"}>
-                                <option value="">Select...</option>
-
-                                <option value="55">55</option>
-
-                                <option value="56">56</option>
-
-                                <option value="57">57</option>
-
-                                <option value="58">58</option>
-
-                                <option value="59">59</option>
-
-                                <option value="60">60</option>
-
-                                <option value="61">61</option>
-
-                                <option value="62">62</option>
-
-                                <option value="63" >63 (Average / Don't Know)</option>
-
-                                <option value="64">64</option>
-
-                                <option value="65">65</option>
-
-                                <option value="66">66</option>
-
-                                <option value="67">67</option>
-
-                                <option value="68">68</option>
-
-                                <option value="69">69</option>
-
-                                <option value="70">70</option>
-
-                                <option value="71">71</option>
-
-                                <option value="72">72</option>
-
-                                <option value="73">73</option>
-
-                                <option value="74">74</option>
-
-                                <option value="75">75</option>
-
-                            </select>
+                            <PupilSelect />
                         </Col>
                     </Row>
                 </Container>

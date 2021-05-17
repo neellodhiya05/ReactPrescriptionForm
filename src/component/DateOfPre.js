@@ -31,10 +31,12 @@ export class DateOfPre extends Component {
                         </form>
                     </Col>
                      <Col>
+                   
                             <DatePicker
                                  selected={this.state.startDate}
                                 onChange={this.handleChange}
                               />
+                            
                      </Col>
                 </Row>
              </Container>

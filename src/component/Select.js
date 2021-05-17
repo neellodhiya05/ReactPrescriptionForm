@@ -5,9 +5,15 @@ export class Select extends React.Component {
     super(props);
     this.state = {
      values: [],
-      colours: {}
+      colours: {},
+      selectValues: ""
     };
+    this.handleDropdownChange = this.handleDropdownChange.bind(this);
   }
+  handleDropdownChange(e){
+      this.setState({ selectValues: e.target.value });
+}
+  
 
   componentDidMount() {
     this.setState({
@@ -78,11 +84,17 @@ export class Select extends React.Component {
 
     return (
       <div>
-        <select>
+        <select onChange={this.handleDropdownChange}>
           {valuesList}
         </select>
+        <div>
+            Selected value is : {this.state.selectValues}
+        </div>
+           
+        
       </div>
     );
+
   }
 }
 

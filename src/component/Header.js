@@ -6,6 +6,7 @@ import { Lens } from "./Lens";
 import { PupilPre } from "./PupilPre";
 
 
+
 export class Header extends Component {
     render() {
         const mystyle = {
@@ -32,6 +33,7 @@ export class Header extends Component {
                     <input type="text" name="name" required ></input>
                 </form>
                 <hr></hr>
+                
                 {/* EyeComponent*/}
                 <Lens />
                 <PupilPre />

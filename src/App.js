@@ -15,7 +15,7 @@ import { Container, Row, Col } from "react-bootstrap";
 function App() {
   return (
     <div>
-     <Container fluid="md" className="container">
+           <Container fluid="md" className="container">
         <Row className="rows">
           <Col className="columns"><Menu /></Col>
         </Row>
@@ -25,9 +25,7 @@ function App() {
         <Route  exact path= "/" component={Simple}/>
         <Route path="/advanced" component={Advanced} />
       </Switch>
-     
-
-    </div>
+     </div>
   );
 }
 

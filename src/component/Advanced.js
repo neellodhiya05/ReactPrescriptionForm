@@ -5,6 +5,7 @@ import { PupilPre } from "./PupilPre";
 import { CheckBoxAndBtn } from "./CheckBoxAndBtn";
 import { DateOfPre } from "./DateOfPre";
 import { ExtraInfo } from "./ExtraInfo";
+import {According} from "./According";
 import { LensAdvanced } from './LensAdvanced';
 
 
@@ -15,7 +16,7 @@ class Advanced extends React.Component {
             <Row className="rows">
               <Col className="columns">
                 <Label />
-                <LensAdvanced />
+                <According />
                 <PupilPre />
                 <DateOfPre />
                 <ExtraInfo />

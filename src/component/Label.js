@@ -27,6 +27,8 @@ export class Label extends Component{
                 </form>
                 <hr></hr>
             </div>
+
+
         )
     }
 }

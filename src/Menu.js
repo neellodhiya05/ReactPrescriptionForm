@@ -5,6 +5,8 @@ class Menu extends React.Component{
     render(){
         return(
             <div>
+
+                
                 <Container >
                     <Row>
                          <Col><NavLink exact activeClassName="active_class" to="/" >Simple Form</NavLink></Col>

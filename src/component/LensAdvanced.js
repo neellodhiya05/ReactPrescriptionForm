@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { Select } from "./Select";
+import { Row, Col } from "react-bootstrap";
+import { Adoption } from "./Adoption";
+import {AxisTextbar} from "./AxisTextbar";
+import {AdNearAdd} from "./AdNearAdd";
 
 
 export class LensAdvanced extends Component{
@@ -22,42 +24,42 @@ export class LensAdvanced extends Component{
                 </Row>
                 <hr></hr>
 
-                <Row style={{ fontSize: " calc(1em + 1vw)" }}>
-                    <Col >Distance</Col>
-                    <Col></Col>
-                    <Col>Distance</Col>
-                 </Row>
-                 <Row>
-                    <Col ><Select /> </Col>
-                    <Col></Col>
-                    <Col><Select /></Col>
-                </Row>
-                <hr></hr>
+                <Adoption />
                 
-                <Row style={{ fontSize: " calc(1em + 1vw)" }}>
-                    <Col >Intermediate</Col>
-                    <Col></Col>
-                    <Col>Intermediate</Col>
-                 </Row>
-                 <Row>
-                    <Col ><Select /> </Col>
-                    <Col></Col>
-                    <Col><Select /></Col>
-                </Row>
                 <hr></hr>
-             
-                <Row style={{ fontSize: " calc(1em + 1vw)" }}>
-                    <Col >Near</Col>
+                <Row style={{ fontFamily: "Arial Black" }}>
+                    <Col >Cylinder(CYL)</Col>
                     <Col></Col>
-                    <Col>Near</Col>
-                 </Row>
-                 <Row>
-                    <Col ><Select /> </Col>
-                    <Col></Col>
-                    <Col><Select /></Col>
+                    <Col ></Col>
                 </Row>
                 <hr></hr>
 
+                <Adoption />
+
+                
+                <hr></hr>
+                <Row style={{ fontFamily: "Arial Black" }}>
+                    <Col >Axis</Col>
+                    <Col></Col>
+                    <Col ></Col>
+                </Row>
+                <hr></hr>
+
+                <AxisTextbar />
+
+                <hr></hr>
+                <Row style={{ fontFamily: "Arial Black" }}>
+                    <Col >Near Addition(ADD)</Col>
+                    <Col></Col>
+                    <Col ></Col>
+                </Row>
+                <hr></hr>
+
+                <AdNearAdd />
+
+               
+                    <p >For prescriptions with a Sphere value stronger than +/- 8, we may still be able to supply your glasses. Please call us on 01793 746601 to discuss your options.</p>
+                <hr></hr>
             </div>
         )
     }

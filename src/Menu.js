@@ -9,8 +9,9 @@ class Menu extends React.Component{
                 
                 <Container >
                     <Row>
-                         <Col><NavLink exact activeClassName="active_class" to="/" >Simple Form</NavLink></Col>
-                         <Col></Col>
+                        <Col><NavLink exact activeClassName="active_class" to="/" >Simple Form</NavLink></Col>
+                        <Col></Col>
+                        <Col></Col>
                         <Col><NavLink exact activeClassName="active_class" to="/advanced" >Advanced Form</NavLink></Col>
                     </Row>
                 </Container>

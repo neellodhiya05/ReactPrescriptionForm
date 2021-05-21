@@ -52,7 +52,7 @@ export class PupilSelect extends React.Component {
     let valuesList = values.length > 0
     	&& values.map((item, i) => {
       return (
-        <option key={i} value={item.id}>{item.name}</option>
+        <option key={i} value={item.id}>{item.name} </option>
       )
     }, this);
 

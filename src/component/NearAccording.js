@@ -6,9 +6,10 @@ import Typography from "@material-ui/core/Typography";
 import AccordionSummary from "@material-ui/core/AccordionSummary"; 
 import { Row, Col } from "react-bootstrap";
 import { Select } from "./Select";
+import { NearAddSelect } from "./NearAddSelect";
 
 
-export class SphereAccording extends Component{
+export class NearAccording extends Component{
     render(){
         return(
          
@@ -21,7 +22,7 @@ export class SphereAccording extends Component{
                
 
              
-                  <Accordion className="SphereAccording" style={{background:"lightgrey"}} > 
+                  <Accordion className="SphereAccording" style={{background:"lightgrey"}}> 
                     <AccordionSummary 
                       expandIcon={<ExpandMoreIcon />} 
                       aria-controls="panel1a-content"
@@ -32,7 +33,7 @@ export class SphereAccording extends Component{
                         }} 
                       > 
                          <Row style={{ fontFamily: "Arial Black" }}>
-                            <Col >Distance</Col>
+                            <Col >Near</Col>
                             <Col></Col>
                             <Col ></Col>
                         </Row>
@@ -83,6 +84,17 @@ export class SphereAccording extends Component{
                     <Col><input type="number" /></Col>
                 </Row>
                 <hr></hr>
+
+                <Row style={{ fontFamily: "Arial Black" }}>
+                    <Col >Near Addition(ADD)</Col>
+                    <Col></Col>
+                    <Col >Near Addition(ADD)</Col>
+                </Row>
+                <Row>
+                    <Col ><NearAddSelect /> </Col>
+                    <Col></Col>
+                    <Col><NearAddSelect /></Col>
+                </Row>
                       </Typography> 
                     </AccordionDetails> 
                   </Accordion> 

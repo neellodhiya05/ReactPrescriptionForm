@@ -15,7 +15,7 @@ export class IntermidiateAccording extends Component{
          
 
     
-                <div stlye={{}}> 
+                <div > 
 
                 
 
@@ -52,7 +52,7 @@ export class IntermidiateAccording extends Component{
                       <Row style={{ fontSize: " calc(1em + 1vw)" }}>
                     <Col >Sphere(SPH)</Col>
                     <Col></Col>
-                     <Col>Sphere(SPH)</Col>
+                     <Col></Col>
                  </Row>
                  <Row>
                     <Col ><Select /> </Col>
@@ -64,7 +64,7 @@ export class IntermidiateAccording extends Component{
                 <Row style={{ fontSize: " calc(1em + 1vw)" }}>
                     <Col >Cylinder(CYL)</Col>
                     <Col></Col>
-                    <Col>Cylinder(CYL)</Col>
+                    <Col></Col>
                  </Row>
                  <Row>
                     <Col ><Select /> </Col>
@@ -76,7 +76,7 @@ export class IntermidiateAccording extends Component{
                 <Row style={{ fontSize: " calc(1em + 1vw)" }}>
                     <Col >Axis</Col>
                     <Col></Col>
-                    <Col>Axis</Col>
+                    <Col></Col>
                  </Row>
                  <Row>
                     <Col ><input type="number" /> </Col>
@@ -88,7 +88,7 @@ export class IntermidiateAccording extends Component{
                 <Row style={{ fontFamily: "Arial Black" }}>
                     <Col >Near Addition(ADD)</Col>
                     <Col></Col>
-                    <Col >Near Addition(ADD)</Col>
+                    <Col ></Col>
                 </Row>
                 <Row>
                     <Col ><NearAddSelect /> </Col>

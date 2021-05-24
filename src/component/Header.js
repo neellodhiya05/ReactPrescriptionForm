@@ -14,6 +14,7 @@ export class Header extends Component {
        
         return (
             <div>
+                
                <Label />
                 {/* EyeComponent*/}
                 <Lens />
@@ -21,6 +22,7 @@ export class Header extends Component {
                 <DateOfPre />
                 <ExtraInfo />
                 <CheckBoxAndBtn />
+                
             </div>
         )
     }

@@ -6,12 +6,6 @@ export function Label (){
     const [data,SetData] =useState({
         name: ""
     })
-    function handle (e){
-        const newdata={  ...data}      
-        newdata[e.target.id] =e.target.value
-        SetData(newdata)
-      
-    }
     function submit(e){
         alert('submit called')
         e.preventDefault();
@@ -22,6 +16,13 @@ export function Label (){
               console.log(res.data)
          })
     }
+    function handle (e){
+        const newdata={  ...data}      
+        newdata[e.target.id] =e.target.value
+        SetData(newdata)
+       console.log(newdata)
+    }
+
   
         const mystyle = {
             color: "black",

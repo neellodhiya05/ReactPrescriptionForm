@@ -22,14 +22,14 @@ export function ExtraInfo() {
                 <Container fluid="md" className="container">
                     <Row>
                         <Col>
-                            <form >
+                            
                                 <label style={inputStyle}>Extra Information:</label>
-                            </form>
+                            
                         </Col>
                         <Col>
-                            <form>
+                            
                                 <input onChange={ (e) => handle(e) } id="extrainfo" value={data.name} type="text-area" name="name" required ></input>
-                            </form>
+                            
                         </Col>
                     </Row>
                 </Container>

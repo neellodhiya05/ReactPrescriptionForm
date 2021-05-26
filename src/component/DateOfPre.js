@@ -26,9 +26,9 @@ export class DateOfPre extends Component {
                <Container fluid="md" className="container">
                  <Row>
                      <Col>
-                        <form >
+                        
                             <label style={inputStyle}>Date Of Prescription:</label>
-                        </form>
+                       
                     </Col>
                      <Col>
                    

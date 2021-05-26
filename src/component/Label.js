@@ -1,33 +1,40 @@
-import { PausePresentationTwoTone } from "@material-ui/icons";
-import Axios from "axios";
-import React,{ useState} from "react";
+import axios from "axios";
+import React from "react";
+import { CheckBoxAndBtn } from "./CheckBoxAndBtn";
+import { DateOfPre } from "./DateOfPre";
+import { ExtraInfo } from "./ExtraInfo";
+import { Lens } from "./Lens";
+import { PupilPre } from "./PupilPre";
+import { Component } from "react";
 
-export function Label (){
-    const url ="/api/formulas/create"
-    const [data,SetData] =useState({
-        name: ""
-    })
-    function submit(e){
-        e.preventDefault();
-        Axios.post(url,{
-            name: parseInt(data.name),
-        })
-        .then(response => { 
+export class Label extends Component{
+
+    constructor(props){
+        super(props)
+
+        this.state ={
+            userId: ' '
+                }
+    }
+
+    changeHandler = (e)=>{
+        this.setState({  [e.target.name]: e.target.value   })
+    }
+  
+    submitHandler = (e) => {
+        e.preventDefault()
+        console.log(this.state)
+        axios.post('https://jsonplaceholder.typicode.com/posts', this.state)
+        .then(response => {
             console.log(response)
         })
         .catch(error => {
-            console.log(error.response)
-        });
-    }   
-    
-    function handle (e){
-        const newdata={  ...data}      
-        newdata[e.target.id] =e.target.value
-        SetData(newdata)
-       console.log(newdata)
+            console.log(error)
+        })
     }
 
-  
+  render(){
+      const { userId} = this.state
         const mystyle = {
             color: "black",
             padding: "10px",
@@ -42,21 +49,28 @@ export function Label (){
         return(
             <div>
                  <div className="heading" style={mystyle}>Enter new prescription</div>
-                <p style={{ textAlign: "center" }}>Enter your prescription below</p>
+                <p  style={{ textAlign: "center" }}>Enter your prescription below</p>
                 <p style={{ fontFamily: "Arial" }}>
                     All prescriptions will be checked by one of our opticians and verified for any potential errors or delays,
                     and they may contact you if they need to discuss your details any further.
                 </p>
-                <form style={inputStyle} onSubmit={(e) => submit(e)}>
-                    <label> Prescription Name:</label>
-                    <input onChange={ (e) => handle(e) } id="name" value={data.name} type="text" name="name" required ></input>
-                    <button>Submit</button>
-                </form>
+                <form  onSubmit={this.submitHandler} >
+                    <label style={inputStyle}> Prescription Name:</label>
+                    <input  id="name" type="text" name="userId" value={userId} onChange={this.changeHandler} required ></input>
+                    
+               
                 <hr></hr>
+                 {/* EyeComponent*/}
+                 <Lens />
+                <PupilPre />
+                <DateOfPre />
+                <ExtraInfo />
+                <CheckBoxAndBtn />
+                </form>
             </div>
 
 
         )
         }
 
-
+    }

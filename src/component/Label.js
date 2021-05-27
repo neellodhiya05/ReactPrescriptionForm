@@ -13,7 +13,8 @@ export class Label extends Component{
         super(props)
 
         this.state ={
-            userId: ' '
+            userId: ' ',
+          
                 }
     }
 
@@ -24,6 +25,7 @@ export class Label extends Component{
     submitHandler = (e) => {
         e.preventDefault()
         console.log(this.state)
+        
         axios.post('https://jsonplaceholder.typicode.com/posts', this.state)
         .then(response => {
             console.log(response)
@@ -32,9 +34,9 @@ export class Label extends Component{
             console.log(error)
         })
     }
-
+ 
   render(){
-      const { userId} = this.state
+      const {userId} = this.state
         const mystyle = {
             color: "black",
             padding: "10px",
@@ -46,8 +48,10 @@ export class Label extends Component{
             fontFamily: "Arial Black",
             padding: "10px",
         }
+        
         return(
             <div>
+                
                  <div className="heading" style={mystyle}>Enter new prescription</div>
                 <p  style={{ textAlign: "center" }}>Enter your prescription below</p>
                 <p style={{ fontFamily: "Arial" }}>

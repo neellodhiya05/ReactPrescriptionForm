@@ -81,7 +81,7 @@ export class Select extends React.Component {
         <option key={i} value={item.id}>{item.name}</option>
       )
     }, this);
-
+    console.log(this.state.selectValues)    
     return (
       <div>
         <select onChange={this.handleDropdownChange}>

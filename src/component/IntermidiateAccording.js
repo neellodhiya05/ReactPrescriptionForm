@@ -94,7 +94,9 @@ export class IntermidiateAccording extends Component{
                     <Col ><NearAddSelect /> </Col>
                     <Col></Col>
                     <Col><NearAddSelect /></Col>
+
                 </Row>
+               
                       </Typography> 
                     </AccordionDetails> 
                   </Accordion> 

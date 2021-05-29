@@ -82,11 +82,11 @@ export class SphereAccording extends Component{
                     <Col></Col>
                     <Col><input type="number" /></Col>
                 </Row>
-                <hr></hr>
+               
                       </Typography> 
                     </AccordionDetails> 
                   </Accordion> 
-                  <hr></hr>
+                 <hr></hr>
                 </div> 
               
         )

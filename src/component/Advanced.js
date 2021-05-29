@@ -70,16 +70,19 @@ submitHandler = (e) => {
               
                <hr></hr>
                 
-               </form>
-           </div>
+               
+           
                 <According />
                 <PupilPre />
                 <DateOfPre />
                 <ExtraInfo />
                 <CheckBoxAndBtn />
+                </form>
+                </div>
               </Col>
             </Row>
           </Container>
+          
         )
     }
 }

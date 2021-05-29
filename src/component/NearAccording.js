@@ -12,16 +12,7 @@ import { NearAddSelect } from "./NearAddSelect";
 export class NearAccording extends Component{
     render(){
         return(
-         
-
-    
-                <div > 
-
-                
-
-               
-
-             
+                <>
                   <Accordion className="SphereAccording" style={{background:"lightgrey"}}> 
                     <AccordionSummary 
                       expandIcon={<ExpandMoreIcon />} 
@@ -99,7 +90,7 @@ export class NearAccording extends Component{
                     </AccordionDetails> 
                   </Accordion> 
                   <hr></hr>
-                </div> 
+                </> 
               
         )
     }

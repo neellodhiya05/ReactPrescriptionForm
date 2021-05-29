@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 export class ExtraInfo extends Component {

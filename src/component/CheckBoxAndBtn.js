@@ -13,7 +13,7 @@ export class CheckBoxAndBtn extends Component {
             <div>
                 <input type="checkbox" />
                 <label >
-                    I confirm that I've read and agree to the <a href="#">Terms and Conditions</a>. I certify that the wearer is over 16 years old and that they are not registered blind or partially sighted. I also confirm that the prescription details above have been entered correctly and I am happy that no errors have been made.
+                    I confirm that I've read and agree to the Terms and Conditions I certify that the wearer is over 16 years old and that they are not registered blind or partially sighted. I also confirm that the prescription details above have been entered correctly and I am happy that no errors have been made.
                 </label>
                
                     <div className="heading" style={mystyle}>

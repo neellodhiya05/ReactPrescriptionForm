@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import {  Row, Col } from "react-bootstrap";
 import { NearAddSelect } from "./NearAddSelect";
 import { Select } from "./Select";
 
 export class Lens extends Component {
-       constructor(props){
-              super(props);
-              
-       }
+       
+
        
        render() {
               const eventhandler = data => console.log(data)

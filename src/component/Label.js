@@ -40,7 +40,7 @@ export class Label extends Component{
     }
  
   render(){
-      const name="neel";
+      
       const eventhandler = data => console.log(data)
       const {userId} = this.state
       
@@ -72,7 +72,7 @@ export class Label extends Component{
                
                 <hr></hr>
                  {/* EyeComponent*/}
-                 <Lens info={name} />
+                 <Lens  />
                 <PupilPre />
                 <DateOfPre />
                 <ExtraInfo onChange={eventhandler}  />

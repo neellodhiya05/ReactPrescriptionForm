@@ -4,10 +4,20 @@ import { NearAddSelect } from "./NearAddSelect";
 import { Select } from "./Select";
 
 export class Lens extends Component {
+       constructor(props){
+              super(props);
+              
+       }
+       
        render() {
+              const eventhandler = data => console.log(data)
+              const nearAdd = data => console.log(data)
+             
               return (
-                     <div>
+                     
 
+                     <div>
+                            
                             <Row style={{ fontFamily: "Arial Black" }}>
 
                                    <Col>Right Eye</Col>
@@ -26,9 +36,9 @@ export class Lens extends Component {
                             </Row>
                             <Row>
 
-                                   <Col ><Select /> </Col>
+                                   <Col ><Select onChange={eventhandler}/></Col>
                                    <Col></Col>
-                                   <Col><Select /></Col>
+                                   <Col><Select onChange={eventhandler}/></Col>
 
                             </Row>
                             <hr></hr>
@@ -41,9 +51,9 @@ export class Lens extends Component {
                             </Row>
                             <Row>
 
-                                   <Col ><Select /> </Col>
+                                   <Col ><Select onChange={eventhandler}/> </Col>
                                    <Col></Col>
-                                   <Col><Select /></Col>
+                                   <Col><Select onChange={eventhandler} /></Col>
 
                             </Row>
                             <hr></hr>
@@ -56,7 +66,7 @@ export class Lens extends Component {
                             </Row>
                             <Row>
 
-                                   <Col ><input type="number" /></Col>
+                                   <Col ><input type="number"/></Col>
                                    <Col></Col>
                                    <Col><input type="number" /></Col>
 
@@ -71,9 +81,9 @@ export class Lens extends Component {
                             </Row>
                             <Row>
 
-                                   <Col ><NearAddSelect /> </Col>
+                                   <Col ><NearAddSelect onChange={nearAdd}/> </Col>
                                    <Col></Col>
-                                   <Col><NearAddSelect /> </Col>
+                                   <Col><NearAddSelect onChange={nearAdd}/> </Col>
 
                             </Row>
                             <hr></hr>

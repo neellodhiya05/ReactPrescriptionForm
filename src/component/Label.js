@@ -9,15 +9,20 @@ import { Component } from "react";
 
 export class Label extends Component{
 
+    
+  
+
     constructor(props){
         super(props)
 
         this.state ={
             userId: ' ',
-          
-                }
+            
+                    }
     }
-
+    handleCallback = (childData) =>{
+        this.setState({extraInfo: childData})
+    }
     changeHandler = (e)=>{
         this.setState({  [e.target.name]: e.target.value   })
     }
@@ -25,7 +30,6 @@ export class Label extends Component{
     submitHandler = (e) => {
         e.preventDefault()
         console.log(this.state)
-        
         axios.post('https://jsonplaceholder.typicode.com/posts', this.state)
         .then(response => {
             console.log(response)
@@ -36,7 +40,10 @@ export class Label extends Component{
     }
  
   render(){
+      const name="neel";
+      const eventhandler = data => console.log(data)
       const {userId} = this.state
+      
         const mystyle = {
             color: "black",
             padding: "10px",
@@ -65,10 +72,10 @@ export class Label extends Component{
                
                 <hr></hr>
                  {/* EyeComponent*/}
-                 <Lens />
+                 <Lens info={name} />
                 <PupilPre />
                 <DateOfPre />
-                <ExtraInfo />
+                <ExtraInfo onChange={eventhandler}  />
                 <CheckBoxAndBtn />
                 </form>
             </div>

@@ -3,7 +3,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import { PupilSelect } from "./PupilSelect";
 
 export class PupilPre extends Component {
+  
+   
+
     render() {
+        const eventhandler = data => console.log(data)
         const inputStyle = {
             fontFamily: "Arial Black",
             padding: "10px",
@@ -19,7 +23,7 @@ export class PupilPre extends Component {
                         </Col>
                     
                         <Col>
-                            <PupilSelect />
+                            <PupilSelect onChange={eventhandler}/>
                         </Col>
                     </Row>
                 </Container>

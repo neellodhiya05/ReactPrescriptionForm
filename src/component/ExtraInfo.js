@@ -1,12 +1,24 @@
 import React, { Component, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-export function ExtraInfo() {
+export class ExtraInfo extends Component {
   
-        const inputStyle = {
-            fontFamily: "Arial Black",
-            padding: "10px",
-        }
+     state ={
+         extraInfo: ' '
+     }
+
+     handleChange = e => {
+        this.setState({ [e.target.name]: e.target.value }, () => {
+          if (this.props.onChange) {
+            this.props.onChange(this.state);
+          }
+        })
+      };
+        render(){
+            const inputStyle = {
+                fontFamily: "Arial Black",
+                padding: "10px",
+            }
         return (
             <div>
                 <Container fluid="md" className="container">
@@ -18,8 +30,7 @@ export function ExtraInfo() {
                         </Col>
                         <Col>
                             
-                                <input id="extrainfo"  type="text-area" name="name" required ></input>
-                            
+                        <input onChange={this.handleChange} id="extrainfo"  type="text-area" name="extraInfo" required ></input>
                         </Col>
                     </Row>
                 </Container>
@@ -27,3 +38,4 @@ export function ExtraInfo() {
             </div>
         )
     }
+}

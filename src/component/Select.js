@@ -5,14 +5,18 @@ export class Select extends React.Component {
     super(props);
     this.state = {
      values: [],
-      colours: {},
-      selectValues: ""
+  
+      
     };
-    this.handleDropdownChange = this.handleDropdownChange.bind(this);
+   
   }
-  handleDropdownChange(e){
-      this.setState({ selectValues: e.target.value });
-}
+handleChange = e => {
+  this.setState({ [e.target.name]: e.target.value }, () => {
+    if (this.props.onChange) {
+      this.props.onChange(this.state);
+    }
+  })
+};
   
 
   componentDidMount() {
@@ -74,22 +78,20 @@ export class Select extends React.Component {
 
   render () {
     const { values } = this.state;
-
+  
     let valuesList = values.length > 0
     	&& values.map((item, i) => {
       return (
-        <option key={i} value={item.id}>{item.name}</option>
+        <option key={i}   value={item.id}>{item.name}</option>
       )
     }, this);
-    console.log(this.state.selectValues)    
+        
     return (
       <div>
-        <select onChange={this.handleDropdownChange}>
+        <select name="select" onChange={this.handleChange}>
           {valuesList}
         </select>
-        <div>
-            Selected value is : {this.state.selectValues}
-        </div>
+    
            
         
       </div>

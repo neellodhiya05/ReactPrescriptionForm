@@ -5,14 +5,17 @@ export class NearAddSelect extends React.Component {
     super(props);
     this.state = {
      values: [],
-      colours: {},
-      selectValues: ""
+     
     };
-    this.handleDropdownChange = this.handleDropdownChange.bind(this);
+ 
   }
-  handleDropdownChange(e){
-    this.setState({ selectValues: e.target.value });
-}
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value }, () => {
+      if (this.props.onChange) {
+        this.props.onChange(this.state);
+      }
+    })
+  };
 
   componentDidMount() {
     this.setState({
@@ -49,12 +52,10 @@ export class NearAddSelect extends React.Component {
 
     return (
       <div>
-        <select onChange={this.handleDropdownChange}>
+        <select onChange={this.handleChange} name="nearAdd">
           {valuesList}
         </select>
-        <div>
-            Selected value is : {this.state.selectValues}
-        </div>
+        
       </div>
     );
   }

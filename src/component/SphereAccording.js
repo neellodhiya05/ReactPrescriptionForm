@@ -5,12 +5,18 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography"; 
 import AccordionSummary from "@material-ui/core/AccordionSummary"; 
 import { Row, Col } from "react-bootstrap";
-import { Select } from "./Select";
 
+import {DistanceSphereRight} from "./DistanceDropDown/DistanceSphereRight";
+import { DistanceSphereLeft } from "./DistanceDropDown/DistanceSphereLeft";
+import { DistanceCylRight } from "./DistanceDropDown/DistanceCylRight";
+import { DistanceCylLefy } from  "./DistanceDropDown/DistanceCylLefy";
+import { DistanceAxisRight } from "./DistanceDropDown/DistanceAxisRight";
+import { DistanceAxisLeft } from "./DistanceDropDown/DistanceAxisLeft";
 
 export class SphereAccording extends Component{
     render(){
       const eventhandler = data => console.log(data)
+      const event = data => console.log(data)
         return(
          
 
@@ -55,9 +61,9 @@ export class SphereAccording extends Component{
                      <Col></Col>
                  </Row>
                  <Row>
-                    <Col ><Select onChange={eventhandler}/> </Col>
+                    <Col ><DistanceSphereRight onChange={eventhandler} /> </Col>
                     <Col></Col>
-                    <Col><Select onChange={eventhandler}/></Col>
+                    <Col><DistanceSphereLeft onChange={eventhandler} /></Col>
                 </Row>
                 <hr></hr>
                 
@@ -67,9 +73,9 @@ export class SphereAccording extends Component{
                     <Col></Col>
                  </Row>
                  <Row>
-                    <Col ><Select onChange={eventhandler}/> </Col>
+                    <Col ><DistanceCylRight onChange={eventhandler} /> </Col>
                     <Col></Col>
-                    <Col><Select onChange={eventhandler}/></Col>
+                    <Col><DistanceCylLefy  onChange={eventhandler} /></Col>
                 </Row>
                 <hr></hr>
              
@@ -79,9 +85,9 @@ export class SphereAccording extends Component{
                     <Col></Col>
                  </Row>
                  <Row>
-                    <Col ><input type="number" /> </Col>
+                    <Col ><DistanceAxisRight onChange={event} /> </Col>
                     <Col></Col>
-                    <Col><input type="number" /></Col>
+                    <Col><DistanceAxisLeft onChange={event}  /></Col>
                 </Row>
                
                       </Typography> 

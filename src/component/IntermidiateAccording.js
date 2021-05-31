@@ -5,12 +5,23 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography"; 
 import AccordionSummary from "@material-ui/core/AccordionSummary"; 
 import { Row, Col } from "react-bootstrap";
-import { Select } from "./Select";
+
 import { NearAddSelect } from "./NearAddSelect";
+import { InterSphereRight } from "./IntermidiateDropDown/InterSpherRight";
+import { InterSphereLeft } from "./IntermidiateDropDown/InterSphereLeft";
+import { InterCylRight } from "./IntermidiateDropDown/InterCylRight";
+import { InterCylLeft } from "./IntermidiateDropDown/InterCylLeft";
+import { InterAxisRight } from "./IntermidiateDropDown/InterAxisRight";
+import { InterAxisLeft } from "./IntermidiateDropDown/InterAxisLeft";
+import { InterNearAddRight } from "./IntermidiateDropDown/InterNearAddRight";
+import { InterNearAddLeft } from "./IntermidiateDropDown/InterNearAddLeft";
 
 
 export class IntermidiateAccording extends Component{
     render(){
+      const eventhandler = data => console.log(data)
+      const nearAdd = data => console.log(data)
+      const event = data => console.log(data)
         return(
          
 
@@ -55,9 +66,9 @@ export class IntermidiateAccording extends Component{
                      <Col></Col>
                  </Row>
                  <Row>
-                    <Col ><Select /> </Col>
+                    <Col ><InterSphereRight onChange={eventhandler}/> </Col>
                     <Col></Col>
-                    <Col><Select /></Col>
+                    <Col><InterSphereLeft onChange={eventhandler}/></Col>
                 </Row>
                 <hr></hr>
                 
@@ -67,9 +78,9 @@ export class IntermidiateAccording extends Component{
                     <Col></Col>
                  </Row>
                  <Row>
-                    <Col ><Select /> </Col>
+                    <Col ><InterCylRight onChange={eventhandler}/> </Col>
                     <Col></Col>
-                    <Col><Select /></Col>
+                    <Col><InterCylLeft  onChange={eventhandler}/></Col>
                 </Row>
                 <hr></hr>
              
@@ -79,9 +90,9 @@ export class IntermidiateAccording extends Component{
                     <Col></Col>
                  </Row>
                  <Row>
-                    <Col ><input type="number" /> </Col>
+                    <Col ><InterAxisRight onChange={event}/> </Col>
                     <Col></Col>
-                    <Col><input type="number" /></Col>
+                    <Col><InterAxisLeft onChange={event}/></Col>
                 </Row>
                 <hr></hr>
 
@@ -91,9 +102,9 @@ export class IntermidiateAccording extends Component{
                     <Col ></Col>
                 </Row>
                 <Row>
-                    <Col ><NearAddSelect /> </Col>
+                    <Col ><InterNearAddRight onChange={nearAdd}/> </Col>
                     <Col></Col>
-                    <Col><NearAddSelect /></Col>
+                    <Col><InterNearAddLeft onChange={nearAdd}/></Col>
 
                 </Row>
                

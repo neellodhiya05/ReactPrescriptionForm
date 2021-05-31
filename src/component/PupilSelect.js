@@ -64,9 +64,7 @@ export class PupilSelect extends React.Component {
         <select name="pupilpre" onChange={this.handleChange}>
           {valuesList}
         </select>
-        <div>
-            Selected value is : {this.state.selectValues}
-        </div>
+        
       </div>
     );
   }

@@ -88,7 +88,7 @@ handleChange = e => {
         
     return (
       <div>
-        <select name="select" onChange={this.handleChange}>
+        <select name="rightEyeSphere" onChange={this.handleChange}>
           {valuesList}
         </select>
     

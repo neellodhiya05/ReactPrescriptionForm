@@ -1,16 +1,24 @@
 import React, { Component } from "react";
 import {  Row, Col } from "react-bootstrap";
-import { NearAddSelect } from "./NearAddSelect";
 import { Select } from "./Select";
+import { LeftCylSelect } from "./SelectsComponent/LeftCylSelect";
+import { LeftSphereSelect } from "./SelectsComponent/LeftSphereSelect";
+import { RightCylSelect } from "./SelectsComponent/RightCylSelect";
+import {RightAxis} from "./SelectsComponent/RightAxis";
+import { LeftAxis } from "./SelectsComponent/LeftAxis";
+import { RightNearAdd } from "./SelectsComponent/RightNearAdd";
+import { LeftNearAdd } from "./SelectsComponent/LeftNearAdd";
 
 export class Lens extends Component {
        
-
+       handleCallback = (childData) =>{
+              this.setState({rightAxis: childData})
+          }
        
        render() {
               const eventhandler = data => console.log(data)
               const nearAdd = data => console.log(data)
-             
+              const event = data => console.log(data)
               return (
                      
 
@@ -36,7 +44,7 @@ export class Lens extends Component {
 
                                    <Col ><Select onChange={eventhandler}/></Col>
                                    <Col></Col>
-                                   <Col><Select onChange={eventhandler}/></Col>
+                                   <Col><LeftSphereSelect onChange={eventhandler}/></Col>
 
                             </Row>
                             <hr></hr>
@@ -49,9 +57,9 @@ export class Lens extends Component {
                             </Row>
                             <Row>
 
-                                   <Col ><Select onChange={eventhandler}/> </Col>
+                                   <Col ><RightCylSelect  onChange={eventhandler} /> </Col>
                                    <Col></Col>
-                                   <Col><Select onChange={eventhandler} /></Col>
+                                   <Col><LeftCylSelect onChange={eventhandler}/></Col>
 
                             </Row>
                             <hr></hr>
@@ -64,9 +72,9 @@ export class Lens extends Component {
                             </Row>
                             <Row>
 
-                                   <Col ><input type="number"/></Col>
+                                   <Col ><RightAxis onChange={event}/></Col>
                                    <Col></Col>
-                                   <Col><input type="number" /></Col>
+                                   <Col><LeftAxis onChange={event}/></Col>
 
                             </Row>
                             <hr></hr>
@@ -79,9 +87,9 @@ export class Lens extends Component {
                             </Row>
                             <Row>
 
-                                   <Col ><NearAddSelect onChange={nearAdd}/> </Col>
+                                   <Col ><RightNearAdd onChange={nearAdd} /> </Col>
                                    <Col></Col>
-                                   <Col><NearAddSelect onChange={nearAdd}/> </Col>
+                                   <Col><LeftNearAdd onChange={nearAdd}/> </Col>
 
                             </Row>
                             <hr></hr>

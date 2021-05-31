@@ -10,6 +10,7 @@ import { Select } from "./Select";
 
 export class SphereAccording extends Component{
     render(){
+      const eventhandler = data => console.log(data)
         return(
          
 
@@ -54,9 +55,9 @@ export class SphereAccording extends Component{
                      <Col></Col>
                  </Row>
                  <Row>
-                    <Col ><Select /> </Col>
+                    <Col ><Select onChange={eventhandler}/> </Col>
                     <Col></Col>
-                    <Col><Select /></Col>
+                    <Col><Select onChange={eventhandler}/></Col>
                 </Row>
                 <hr></hr>
                 
@@ -66,9 +67,9 @@ export class SphereAccording extends Component{
                     <Col></Col>
                  </Row>
                  <Row>
-                    <Col ><Select /> </Col>
+                    <Col ><Select onChange={eventhandler}/> </Col>
                     <Col></Col>
-                    <Col><Select /></Col>
+                    <Col><Select onChange={eventhandler}/></Col>
                 </Row>
                 <hr></hr>
              

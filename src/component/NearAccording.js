@@ -5,12 +5,21 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography"; 
 import AccordionSummary from "@material-ui/core/AccordionSummary"; 
 import { Row, Col } from "react-bootstrap";
-import { Select } from "./Select";
-import { NearAddSelect } from "./NearAddSelect";
-
+import {NearSphereRight} from "./NearDropDown/NearSphereRight";
+import { NearAddSelect } from "./NearAddSelect"
+import {NearSphereLeft} from "./NearDropDown/NearSphereLeft";
+import {NearNearAddRight} from "./NearDropDown/NearNearAddRight";
+import {NearNearAddLeft} from "./NearDropDown/NearNearAddLeft";
+import{NearCylRight} from "./NearDropDown/NearCylRight";
+import {NearCylLeft} from "./NearDropDown/NearCylLeft";
+import {NearAxisRight}from "./NearDropDown/NearAxisRight";
+import {NearAxisLeft} from "./NearDropDown/NearAxisLeft";
 
 export class NearAccording extends Component{
     render(){
+      const eventhandler = data => console.log(data)
+      const nearAdd = data => console.log(data)
+      const event = data => console.log(data)
         return(
                 <>
                   <Accordion className="SphereAccording" style={{background:"lightgrey"}}> 
@@ -46,9 +55,9 @@ export class NearAccording extends Component{
                      <Col></Col>
                  </Row>
                  <Row>
-                    <Col ><Select /> </Col>
+                    <Col ><NearSphereRight onChange={eventhandler} /></Col>
                     <Col></Col>
-                    <Col><Select /></Col>
+                    <Col><NearSphereLeft onChange={eventhandler} /> </Col>
                 </Row>
                 <hr></hr>
                 
@@ -58,9 +67,9 @@ export class NearAccording extends Component{
                     <Col></Col>
                  </Row>
                  <Row>
-                    <Col ><Select /> </Col>
+                    <Col ><NearCylRight onChange={eventhandler}/> </Col>
                     <Col></Col>
-                    <Col><Select /></Col>
+                    <Col><NearCylLeft onChange={eventhandler}/></Col>
                 </Row>
                 <hr></hr>
              
@@ -70,9 +79,9 @@ export class NearAccording extends Component{
                     <Col></Col>
                  </Row>
                  <Row>
-                    <Col ><input type="number" /> </Col>
+                    <Col ><NearAxisRight onChange={event}/> </Col>
                     <Col></Col>
-                    <Col><input type="number" /></Col>
+                    <Col><NearAxisLeft onChange={event}/></Col>
                 </Row>
                 <hr></hr>
 
@@ -82,9 +91,9 @@ export class NearAccording extends Component{
                     <Col ></Col>
                 </Row>
                 <Row>
-                    <Col ><NearAddSelect /> </Col>
+                    <Col ><NearNearAddRight onChange={nearAdd} /> </Col>
                     <Col></Col>
-                    <Col><NearAddSelect /></Col>
+                    <Col><NearNearAddLeft onChange={nearAdd} /></Col>
                 </Row>
                       </Typography> 
                     </AccordionDetails> 
